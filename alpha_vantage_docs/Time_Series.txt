@@ -1,0 +1,138 @@
+Help on function get_batch_stock_quotes in module alpha_vantage.timeseries
+
+get_batch_stock_quotes(self, symbols)
+    Return multiple stock quotes with a single request.
+    It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbols:  A tuple or list Sof symbols to query
+
+----------------------------------------------------------------------
+
+Help on function get_daily in module alpha_vantage.timeseries
+
+get_daily(self, symbol, outputsize='compact')
+    Return daily time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+        outputsize:  The size of the call, supported values are
+            'compact' and 'full; the first returns the last 100 points in the
+            data series, and 'full' returns the full-length intraday times
+            series, commonly above 1MB (default 'compact')
+
+----------------------------------------------------------------------
+
+Help on function get_daily_adjusted in module alpha_vantage.timeseries
+
+get_daily_adjusted(self, symbol, outputsize='compact')
+    Return daily adjusted (date, daily open, daily high, daily low,
+    daily close, daily split/dividend-adjusted close, daily volume)
+    time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+        outputsize:  The size of the call, supported values are
+            'compact' and 'full; the first returns the last 100 points in the
+            data series, and 'full' returns the full-length intraday times
+            series, commonly above 1MB (default 'compact')
+
+----------------------------------------------------------------------
+
+Help on function get_intraday in module alpha_vantage.timeseries
+
+get_intraday(self, symbol, interval='15min', outputsize='compact')
+    Return intraday time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+        interval:  time interval between two conscutive values,
+            supported values are '1min', '5min', '15min', '30min', '60min'
+            (default '15min')
+        outputsize:  The size of the call, supported values are
+            'compact' and 'full; the first returns the last 100 points in the
+            data series, and 'full' returns the full-length intraday times
+            series, commonly above 1MB (default 'compact')
+
+----------------------------------------------------------------------
+
+Help on function get_monthly in module alpha_vantage.timeseries
+
+get_monthly(self, symbol)
+    Return monthly time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+
+----------------------------------------------------------------------
+
+Help on function get_monthly_adjusted in module alpha_vantage.timeseries
+
+get_monthly_adjusted(self, symbol)
+    Return monthly time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+
+----------------------------------------------------------------------
+
+Help on function get_weekly in module alpha_vantage.timeseries
+
+get_weekly(self, symbol)
+    Return weekly time series in two json objects as data and
+    meta_data. It raises ValueError when problems arise
+    
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+
+----------------------------------------------------------------------
+
+Help on function get_weekly_adjusted in module alpha_vantage.timeseries
+
+get_weekly_adjusted(self, symbol)
+    weekly adjusted time series (last trading day of each week,
+    weekly open, weekly high, weekly low, weekly close, weekly adjusted
+    close, weekly volume, weekly dividend) of the equity specified,
+    covering up to 20 years of historical data.
+    Keyword Arguments:
+        symbol:  the symbol for the equity we want to get its data
+
+----------------------------------------------------------------------
+
+Help on function map_to_matype in module alpha_vantage.alphavantage
+
+map_to_matype(self, matype)
+    Convert to the alpha vantage math type integer. It returns an
+    integer correspondant to the type of math to apply to a function. It
+    raises ValueError if an integer greater than the supported math types
+    is given.
+    
+    Keyword Arguments:
+        matype:  The math type of the alpha vantage api. It accepts
+        integers or a string representing the math type.
+    
+            * 0 = Simple Moving Average (SMA),
+            * 1 = Exponential Moving Average (EMA),
+            * 2 = Weighted Moving Average (WMA),
+            * 3 = Double Exponential Moving Average (DEMA),
+            * 4 = Triple Exponential Moving Average (TEMA),
+            * 5 = Triangular Moving Average (TRIMA),
+            * 6 = T3 Moving Average,
+            * 7 = Kaufman Adaptive Moving Average (KAMA),
+            * 8 = MESA Adaptive Moving Average (MAMA)
+
+----------------------------------------------------------------------
+
+Help on function set_proxy in module alpha_vantage.alphavantage
+
+set_proxy(self, proxy=None)
+    Set a new proxy configuration
+    
+    Keyword Arguments:
+        proxy: Dictionary mapping protocol or protocol and hostname to 
+        the URL of the proxy.

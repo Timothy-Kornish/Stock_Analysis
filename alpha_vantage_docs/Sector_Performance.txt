@@ -1,0 +1,53 @@
+Help on function get_sector in module alpha_vantage.sectorperformance
+
+get_sector(self)
+    This API returns the realtime and historical sector performances
+    calculated from S&P500 incumbents.
+    
+    Returns:
+        A pandas or a dictionary with the results from the api call
+
+----------------------------------------------------------------------
+
+Help on function map_to_matype in module alpha_vantage.alphavantage
+
+map_to_matype(self, matype)
+    Convert to the alpha vantage math type integer. It returns an
+    integer correspondant to the type of math to apply to a function. It
+    raises ValueError if an integer greater than the supported math types
+    is given.
+    
+    Keyword Arguments:
+        matype:  The math type of the alpha vantage api. It accepts
+        integers or a string representing the math type.
+    
+            * 0 = Simple Moving Average (SMA),
+            * 1 = Exponential Moving Average (EMA),
+            * 2 = Weighted Moving Average (WMA),
+            * 3 = Double Exponential Moving Average (DEMA),
+            * 4 = Triple Exponential Moving Average (TEMA),
+            * 5 = Triangular Moving Average (TRIMA),
+            * 6 = T3 Moving Average,
+            * 7 = Kaufman Adaptive Moving Average (KAMA),
+            * 8 = MESA Adaptive Moving Average (MAMA)
+
+----------------------------------------------------------------------
+
+Help on function percentage_to_float in module alpha_vantage.sectorperformance
+
+percentage_to_float(self, val)
+    Transform a string of ther form f.f% into f.f/100
+    
+    Keyword Arguments:
+        val: The string to convert
+
+----------------------------------------------------------------------
+
+Help on function set_proxy in module alpha_vantage.alphavantage
+
+set_proxy(self, proxy=None)
+    Set a new proxy configuration
+    
+    Keyword Arguments:
+        proxy: Dictionary mapping protocol or protocol and hostname to 
+        the URL of the proxy.
